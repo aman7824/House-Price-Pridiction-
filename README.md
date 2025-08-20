@@ -47,4 +47,4 @@ pip install -r requirements.txt
 
 
 
-**Note:** This project was created as a sample exercise during the Data Mining course in my undergraduate Computer Engineering program.
+**Note:** This project is developed as a part of college coursework to demonstrate the application of machine learning techniques for predicting house prices. It focuses on data preprocessing, feature engineering, and model evaluation. The code is intended for educational purposes and to enhance practical understanding of regression models in Python
