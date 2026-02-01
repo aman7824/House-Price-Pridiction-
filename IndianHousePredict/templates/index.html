@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Price Prediction</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">
+                <i class="fas fa-home me-2"></i>
+                Flat Price Prediction
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Form Column -->
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-calculator me-2"></i>
+                            Property Details
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="predictionForm">
+                            <!-- BHK -->
+                            <div class="mb-3">
+                                <label for="bhk" class="form-label">Property Type (BHK)</label>
+                                <select class="form-select" id="bhk" name="bhk" required>
+                                    <option value="">Select BHK</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2" selected>2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                    <option value="5">5 BHK</option>
+                                </select>
+                            </div>
+
+                            <!-- Area -->
+                            <div class="mb-3">
+                                <label for="area_sqft" class="form-label">Area (Square Feet)</label>
+                                <input type="number" class="form-control" id="area_sqft" name="area_sqft" 
+                                       placeholder="e.g., 1200" min="100" max="10000" required>
+                                <div class="form-text">Enter area between 100 - 10,000 sqft</div>
+                            </div>
+
+                            <!-- City -->
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <select class="form-select" id="city" name="city" required>
+                                    <option value="">Select City</option>
+                                    <option value="Bangalore" selected>Bangalore</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Pune">Pune</option>
+                                </select>
+                            </div>
+
+                            <!-- Locality -->
+                            <div class="mb-3">
+                                <label for="locality" class="form-label">Locality</label>
+                                <select class="form-select" id="locality" name="locality" required>
+                                    <option value="">Select Locality</option>
+                                    <option value="Whitefield">Whitefield</option>
+                                    <option value="Koramangala">Koramangala</option>
+                                    <option value="Indiranagar">Indiranagar</option>
+                                    <option value="HSR Layout">HSR Layout</option>
+                                    <option value="Electronic City">Electronic City</option>
+                                    <option value="Marathahalli">Marathahalli</option>
+                                    <option value="Bellandur">Bellandur</option>
+                                </select>
+                                <div class="form-text">Localities available in the dataset</div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Age -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="age" class="form-label">Property Age (Years)</label>
+                                    <input type="number" class="form-control" id="age" name="age" 
+                                           placeholder="e.g., 5" min="0" max="100" required>
+                                </div>
+
+                                <!-- Floor -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="floor" class="form-label">Floor Number</label>
+                                    <input type="number" class="form-control" id="floor" name="floor" 
+                                           placeholder="e.g., 3" min="0" max="50" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Bathrooms -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="bathrooms" class="form-label">Bathrooms</label>
+                                    <input type="number" class="form-control" id="bathrooms" name="bathrooms" 
+                                           placeholder="e.g., 2" min="1" max="10" required>
+                                </div>
+
+                                <!-- Balconies -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="balconies" class="form-label">Balconies</label>
+                                    <input type="number" class="form-control" id="balconies" name="balconies" 
+                                           placeholder="e.g., 1" min="0" max="10" required>
+                                </div>
+                            </div>
+
+                            <!-- Amenities -->
+                            <div class="mb-3">
+                                <label class="form-label">Amenities</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="parking" name="parking" value="1">
+                                    <label class="form-check-label" for="parking">
+                                        <i class="fas fa-car me-1"></i> Parking Available
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="lift" name="lift" value="1">
+                                    <label class="form-check-label" for="lift">
+                                        <i class="fas fa-elevator me-1"></i> Lift/Elevator
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                                    <i class="fas fa-calculator me-2"></i>
+                                    Predict Price
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Column -->
+            <div class="col-lg-6">
+                <!-- Loading Spinner -->
+                <div id="loadingSpinner" class="text-center py-5 d-none">
+                    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3">Analyzing property details...</p>
+                </div>
+
+                <!-- Error Alert -->
+                <div id="errorAlert" class="alert alert-danger d-none" role="alert">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <span id="errorMessage"></span>
+                </div>
+
+                <!-- Result Card -->
+                <div id="resultCard" class="card shadow d-none">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Price Prediction
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <h2 class="text-success mb-1">Estimated Price</h2>
+                            <h1 class="display-3 fw-bold text-primary" id="predictedPrice">₹ 0</h1>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <h6 class="fw-bold">
+                                <i class="fas fa-info-circle me-2"></i>
+                                95% Prediction Interval
+                            </h6>
+                            <div class="d-flex justify-content-between mt-2">
+                                <div>
+                                    <small class="text-muted">Lower Bound</small>
+                                    <div class="fw-bold" id="lowerBound">₹ 0</div>
+                                </div>
+                                <div class="text-end">
+                                    <small class="text-muted">Upper Bound</small>
+                                    <div class="fw-bold" id="upperBound">₹ 0</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="card-title">
+                                    <i class="fas fa-robot me-2"></i>
+                                    Model Information
+                                </h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>Model:</strong> <span id="modelName">-</span></li>
+                                    <li><strong>Dataset:</strong> Bengaluru Housing Data</li>
+                                    <li><strong>RMSE:</strong> ₹ <span id="rmseValue">-</span></li>
+                                    <li><strong>MAE:</strong> ₹ <span id="maeValue">-</span></li>
+                                    <li><strong>R² Score:</strong> <span id="r2Value">-</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning mt-3 mb-0">
+                            <small>
+                                <i class="fas fa-lightbulb me-1"></i>
+                                <strong>Note:</strong> This prediction is based on historical data from Bengaluru. 
+                                Actual prices may vary based on market conditions, exact location, and property condition.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Card (shown initially) -->
+                <div id="infoCard" class="card shadow">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-home fa-4x text-primary mb-3"></i>
+                        <h4>Welcome to Flat Price Prediction</h4>
+                        <p class="text-muted">
+                            Fill in the property details on the left to get an instant price prediction 
+                            powered by machine learning models trained on Indian flat data.
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Accurate predictions using XGBoost/RandomForest
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            95% confidence intervals
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Trained on real Bengaluru housing data
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center text-muted">
+            <p class="mb-0">
+                <i class="fas fa-code me-2"></i>
+                Indian Flat Price Prediction | Built with Python, Flask, XGBoost & Bootstrap
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

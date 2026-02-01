@@ -1,0 +1,53 @@
+Build a complete, production-ready web application for **Indian house price prediction** using **Python**. Deliverables: dataset prep, ML model, REST API, and a responsive frontend. Requirements:
+
+1) Project summary
+- A responsive single-page website where user selects property type (1 BHK / 2 BHK / 3 BHK), enters area (sqft), location (city / locality), age of property (years), floor number, balconies, bathrooms, and basic amenities (parking, lift).
+- Output: predicted **price in Indian Rupees (INR)** with formatted display (e.g., ₹ 45,00,000) and a confidence/interval estimate.
+
+2) Tech stack
+- Backend & ML: Python (pandas, scikit-learn/xgboost/lightgbm), joblib/pickle for model export, Flask or FastAPI for API.
+- Frontend: Responsive design using Bootstrap 5 or Tailwind CSS (mobile-first). Vanilla JS or minimal React optional.
+- Optional: Dockerfile for containerization.
+
+3) Dataset & preprocessing
+- Use a publicly available Indian housing dataset (e.g., Bengaluru Housing Data on Kaggle or other India city datasets). Include instructions to replace dataset with other city datasets.
+- Steps: missing value handling, outlier detection, feature engineering (price per sqft, BHK dummies, encode locality as target-encoding or one-hot, create age buckets), train/test split, standardization if required.
+- Save preprocessing pipeline + trained model as `pipeline.joblib`.
+
+4) Model
+- Train at least two models (RandomForestRegressor and XGBoost/LightGBM). Use cross-validation and output RMSE, MAE. Choose best model and save it.
+- Provide a function `predict_price(input_dict)` that loads pipeline and returns predicted INR and 95% prediction interval (e.g., using quantile regression, or bootstrap/ensemble variance).
+
+5) API
+- Create a REST API with Flask or FastAPI exposing:
+  - `POST /predict` — accepts JSON with fields: `bhk`, `area_sqft`, `city`, `locality`, `age`, `floor`, `bathrooms`, `balconies`, `parking`, `lift`. Returns `{ "predicted_price_inr": 4500000, "formatted": "₹ 45,00,000", "lower": ..., "upper": ..., "model": "xgboost", "rmse": ... }`.
+  - `GET /` — serves frontend static page.
+- Validate inputs and return useful error messages.
+
+6) Frontend
+- Single responsive page:
+  - Clean form for inputs (BHK select, area input, dropdown for city/locality with auto-complete optional).
+  - Submit button calls `/predict` and displays result card with big price in INR, prediction interval, and short explanation (e.g., "Model: XGBoost — trained on Bengaluru dataset, RMSE = ₹ XX").
+  - Use client-side validation and show loader while waiting.
+  - Mobile-first design, accessible, and friendly UX.
+
+7) Dev & run instructions
+- Provide `requirements.txt`, `run.sh` or `docker-compose.yml`.
+- Add a README with commands to train model, export pipeline, run API, and run frontend.
+- Add small test file showing sample `curl` request and expected response.
+
+8) Code quality
+- Modular code (train.py, app.py, model.py, utils.py, static/ and templates/).
+- Comments, type hints, and basic unit tests for preprocessing and prediction.
+- Include a sample small dataset subset (or script to download dataset) so reviewer can run end-to-end.
+
+9) Bonus (optional)
+- Add feature importance plot and show on frontend.
+- Allow user to choose currency display (INR with lakhs/crores formatting).
+- Simple Dockerfile and instructions for deployment on Heroku/GCP/AWS Lightsail.
+
+Please produce:
+- Complete project folder structure with code files (train script, API, frontend files).
+- Example dataset preprocessing steps and sample data rows.
+- Instructions to replace dataset for other Indian cities.
+- All code in Python (no other backend languages). Frontend may use HTML/CSS/JS or minimal React.

@@ -1,0 +1,97 @@
+area_sqft,bhk,bathrooms,balconies,floor,age,parking,lift,locality,city,price
+1200,2,2,1,3,5,1,1,Whitefield,Bangalore,4500000
+850,1,1,1,2,2,0,1,Koramangala,Bangalore,3200000
+1500,3,2,2,1,10,1,0,Indiranagar,Bangalore,6500000
+950,2,1,1,4,3,1,1,HSR Layout,Bangalore,4200000
+1800,3,3,2,2,1,2,1,Whitefield,Bangalore,7200000
+750,1,1,0,1,15,0,0,Marathahalli,Bangalore,2800000
+2200,4,3,3,5,7,2,1,Koramangala,Bangalore,9500000
+1100,2,2,1,3,4,1,1,Electronic City,Bangalore,3800000
+1650,3,2,2,6,5,1,1,Indiranagar,Bangalore,7800000
+900,2,1,1,2,8,0,1,Bellandur,Bangalore,3500000
+2500,4,4,3,1,2,2,1,Whitefield,Bangalore,11000000
+1300,2,2,2,4,6,1,1,HSR Layout,Bangalore,5200000
+800,1,1,1,3,4,0,1,Marathahalli,Bangalore,2900000
+1950,3,3,2,2,3,2,1,Koramangala,Bangalore,8500000
+1150,2,2,1,5,9,1,1,Electronic City,Bangalore,4000000
+2800,4,4,3,3,1,2,1,Indiranagar,Bangalore,13500000
+1000,2,1,1,1,12,1,0,Bellandur,Bangalore,3600000
+1400,3,2,1,4,5,1,1,Whitefield,Bangalore,5800000
+950,2,2,1,2,7,0,1,Marathahalli,Bangalore,3400000
+2100,3,3,2,6,4,2,1,HSR Layout,Bangalore,8200000
+1250,2,2,2,3,3,1,1,Koramangala,Bangalore,5500000
+880,1,1,1,4,6,0,1,Electronic City,Bangalore,3000000
+1750,3,2,2,1,8,1,1,Indiranagar,Bangalore,7200000
+1100,2,2,1,5,2,1,1,Bellandur,Bangalore,4100000
+2350,4,3,3,2,5,2,1,Whitefield,Bangalore,10200000
+1450,3,2,2,3,10,1,1,HSR Layout,Bangalore,5600000
+920,2,1,1,1,11,0,0,Marathahalli,Bangalore,3100000
+1600,3,3,1,4,4,1,1,Koramangala,Bangalore,6800000
+1050,2,2,1,2,6,1,1,Electronic City,Bangalore,3900000
+2650,4,4,3,5,3,2,1,Indiranagar,Bangalore,12500000
+1320,2,2,2,3,7,1,1,Bellandur,Bangalore,4800000
+775,1,1,0,2,9,0,1,Marathahalli,Bangalore,2700000
+1850,3,3,2,1,2,2,1,Whitefield,Bangalore,7500000
+1200,2,2,1,6,5,1,1,HSR Layout,Bangalore,4600000
+2400,4,3,3,2,6,2,1,Koramangala,Bangalore,10500000
+1550,3,2,2,4,4,1,1,Indiranagar,Bangalore,6900000
+990,2,1,1,3,8,0,1,Electronic City,Bangalore,3500000
+1700,3,3,2,2,3,1,1,Bellandur,Bangalore,6200000
+1150,2,2,1,5,10,1,1,Whitefield,Bangalore,4300000
+2200,3,3,2,1,1,2,1,HSR Layout,Bangalore,9200000
+1380,2,2,2,4,5,1,1,Marathahalli,Bangalore,4900000
+850,1,1,1,2,7,0,1,Electronic City,Bangalore,3100000
+1920,3,2,2,3,4,1,1,Koramangala,Bangalore,7900000
+1280,2,2,1,5,6,1,1,Indiranagar,Bangalore,5300000
+2550,4,4,3,2,2,2,1,Whitefield,Bangalore,11800000
+1480,3,3,2,1,8,1,1,Bellandur,Bangalore,5700000
+930,2,1,1,4,5,0,1,Marathahalli,Bangalore,3300000
+1650,3,2,2,3,3,1,1,HSR Layout,Bangalore,6600000
+1100,2,2,1,2,9,1,1,Electronic City,Bangalore,4000000
+2750,4,4,3,4,1,2,1,Koramangala,Bangalore,13000000
+1400,2,2,2,5,4,1,1,Indiranagar,Bangalore,5800000
+820,1,1,1,1,6,0,0,Bellandur,Bangalore,2950000
+1800,3,3,2,2,5,2,1,Whitefield,Bangalore,7400000
+1220,2,2,1,4,7,1,1,HSR Layout,Bangalore,4700000
+2300,4,3,3,3,3,2,1,Marathahalli,Bangalore,9800000
+1520,3,2,2,1,10,1,1,Koramangala,Bangalore,6100000
+975,2,1,1,5,4,0,1,Electronic City,Bangalore,3600000
+1750,3,3,2,2,2,1,1,Indiranagar,Bangalore,7100000
+1180,2,2,1,3,8,1,1,Bellandur,Bangalore,4400000
+2600,4,4,3,1,5,2,1,Whitefield,Bangalore,12200000
+1350,2,2,2,4,6,1,1,HSR Layout,Bangalore,5100000
+890,1,1,1,2,5,0,1,Marathahalli,Bangalore,3200000
+1950,3,3,2,5,3,2,1,Koramangala,Bangalore,8300000
+1280,2,2,1,1,7,1,1,Electronic City,Bangalore,4500000
+2450,4,3,3,3,4,2,1,Indiranagar,Bangalore,10800000
+1580,3,2,2,2,6,1,1,Bellandur,Bangalore,6300000
+940,2,1,1,4,9,0,1,Whitefield,Bangalore,3400000
+1720,3,3,2,1,2,1,1,HSR Layout,Bangalore,6900000
+1150,2,2,1,5,5,1,1,Marathahalli,Bangalore,4200000
+2150,3,3,2,3,1,2,1,Koramangala,Bangalore,8900000
+1420,2,2,2,2,8,1,1,Indiranagar,Bangalore,5600000
+865,1,1,1,3,4,0,1,Electronic City,Bangalore,3050000
+1880,3,2,2,4,5,1,1,Bellandur,Bangalore,7600000
+1300,2,2,1,1,10,1,0,Whitefield,Bangalore,4800000
+2500,4,4,3,5,3,2,1,HSR Layout,Bangalore,11500000
+1480,3,3,2,2,7,1,1,Koramangala,Bangalore,5900000
+920,2,1,1,3,6,0,1,Marathahalli,Bangalore,3300000
+1650,3,2,2,4,4,1,1,Indiranagar,Bangalore,6700000
+1120,2,2,1,5,8,1,1,Electronic City,Bangalore,4100000
+2700,4,4,3,1,2,2,1,Bellandur,Bangalore,12800000
+1380,2,2,2,3,5,1,1,Whitefield,Bangalore,5200000
+835,1,1,1,2,7,0,1,HSR Layout,Bangalore,3000000
+1920,3,3,2,4,3,2,1,Marathahalli,Bangalore,7800000
+1250,2,2,1,1,9,1,1,Koramangala,Bangalore,4900000
+2350,4,3,3,5,4,2,1,Indiranagar,Bangalore,10300000
+1550,3,2,2,2,6,1,1,Electronic City,Bangalore,6200000
+985,2,1,1,3,5,0,1,Bellandur,Bangalore,3650000
+1780,3,3,2,1,2,1,1,Whitefield,Bangalore,7300000
+1200,2,2,1,4,7,1,1,HSR Layout,Bangalore,4600000
+2250,4,3,3,2,1,2,1,Koramangala,Bangalore,9700000
+1450,2,2,2,5,8,1,1,Marathahalli,Bangalore,5400000
+875,1,1,1,1,6,0,0,Indiranagar,Bangalore,3150000
+1850,3,3,2,3,4,2,1,Electronic City,Bangalore,7500000
+1320,2,2,1,2,10,1,1,Bellandur,Bangalore,4800000
+2550,4,4,3,4,5,2,1,Whitefield,Bangalore,11900000
+1500,3,2,2,1,3,1,1,HSR Layout,Bangalore,6000000
