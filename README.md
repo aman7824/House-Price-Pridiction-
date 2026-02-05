@@ -1,12 +1,12 @@
-# House Price Prediction🏠
+# Flat Price Prediction🏠
 
-This repository contains a machine learning project focused on predicting house prices based on various features. The model was developed using Python and libraries such as pandas, scikit-learn, and matplotlib in a Jupyter Notebook.
+This repository contains a machine learning project focused on predicting Flat prices based on various features. The model was developed using Python and libraries such as pandas, scikit-learn, and matplotlib in a Jupyter Notebook.
 
 
 
 ## Project Overview
 
-In this project, we aim to predict house prices using a dataset with multiple features related to the properties. The project demonstrates the end-to-end process of building a regression model, from data exploration to model evaluation.
+In this project, we aim to predict Flat prices using a dataset with multiple features related to the properties. The project demonstrates the end-to-end process of building a regression model, from data exploration to model evaluation.
 
 ### Key Steps:
 
